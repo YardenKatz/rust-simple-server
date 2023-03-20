@@ -1,0 +1,44 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'simple_server'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=simple_server",
+                    "--package=simple_server"
+                ],
+                "filter": {
+                    "name": "simple_server",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'simple_server'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=simple_server",
+                    "--package=simple_server"
+                ],
+                "filter": {
+                    "name": "simple_server",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
+view raw launch.json hosted with ❤ by GitHub
